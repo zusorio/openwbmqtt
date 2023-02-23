@@ -714,6 +714,14 @@ SWITCHES_PER_LP = [
         mqttTopicCurrentValue="ChargePointEnabled",
         device_class=SwitchDeviceClass.SWITCH,
     ),
+    openwbSwitchEntityDescription(
+        key="PriceBasedCharging",
+        entity_category=EntityCategory.CONFIG,
+        name="Preisbasiertes Laden (Modus Sofortladen)",
+        mqttTopicCommand="etBasedCharging",
+        mqttTopicCurrentValue="etBasedCharging",
+        device_class=SwitchDeviceClass.SWITCH,
+    ),
 ]
 
 NUMBERS_GLOBAL = [
