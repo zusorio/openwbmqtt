@@ -122,6 +122,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.services.async_remove(DOMAIN, "change_global_charge_mode")
     hass.services.async_remove(DOMAIN, "change_charge_limitation_per_cp")
     hass.services.async_remove(DOMAIN, "change_charge_current_per_cp")
+    hass.services.async_remove(DOMAIN, "enable_disable_price_based_charging")
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
 
     return unload_ok
